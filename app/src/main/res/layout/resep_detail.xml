@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/resep1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/cardview_dark_background"
+
+            app:layout_constraintTop_toBottomOf="@+id/imgRecipe"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="mie sedap" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/txtSubtitleBahan"
+            style="@style/TextResep.Subtitle"
+            android:text="Bahan yang dibutuhkan"
+            android:textColor="@color/white"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            app:layout_constraintBottom_toTopOf="@id/txtBahan"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtBahan"
+            style="@style/TextResep"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtitleBahan"
+            tools:text="1 Sendok Garam Teh">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtSubtitleCara"
+            android:layout_width="wrap_content"
+            style="@style/TextResep.Subtitle"
+            android:textColor="@color/white"
+            android:text="Cara Memasak"
+            android:background="@color/cardview_dark_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/txtBahan">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtCara"
+            style="@style/TextResep"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtitleCara"
+            tools:text="Caranyaaaa">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
